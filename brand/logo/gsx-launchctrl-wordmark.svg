@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="gsxBlueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#087BFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#21C8FF;stop-opacity:1" />
+    </linearGradient>
+    <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Background rect for visibility on any surface -->
+  <rect width="800" height="200" fill="none" />
+  
+  <!-- GSX - Primary wordmark -->
+  <text x="40" y="135" 
+        font-family="'Space Grotesk', sans-serif" 
+        font-size="110" 
+        font-weight="900" 
+        fill="#F5F7FA"
+        letter-spacing="-0.02em">GSX</text>
+  
+  <!-- The X signature element with cyan glow -->
+  <text x="40" y="135" 
+        font-family="'Space Grotesk', sans-serif" 
+        font-size="110" 
+        font-weight="900" 
+        fill="url(#gsxBlueGradient)"
+        letter-spacing="-0.02em"
+        filter="url(#cyanGlow)">X</text>
+  
+  <!-- LAUNCHCTRL - Secondary wordmark -->
+  <text x="40" y="175" 
+        font-family="'Space Grotesk', sans-serif" 
+        font-size="48" 
+        font-weight="700" 
+        fill="#C7D0DC"
+        letter-spacing="0.05em"
+        text-transform="uppercase">LAUNCHCTRL</text>
+</svg>

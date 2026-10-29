@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSX-LAUNCHCTRL — Launch Smarter. Execute Harder.</title>
+  <meta name="description" content="GSX-LAUNCHCTRL is an AI coding-agent CLI for builders who push limits. Plan smarter. Execute harder. Power under control.">
+  <link rel="icon" href="../brand/logo/gsx-launchctrl-favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+  <link rel="stylesheet" href="styles/terminal.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <div style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+        <div class="nav-logo">
+          <span class="logo-text">GSX</span>
+          <span class="logo-accent">LAUNCHCTRL</span>
+        </div>
+        <div class="nav-links">
+          <a href="#mission" class="nav-link">Mission</a>
+          <a href="#vision" class="nav-link">Vision</a>
+          <a href="#terminal" class="nav-link">Terminal</a>
+          <a href="#philosophy" class="nav-link">Philosophy</a>
+          <a href="#contact" class="nav-link">Coming Soon</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="status-label">
+          <span class="status-indicator status-online">
+            <span class="status-dot"></span>
+            <span>IN DEVELOPMENT</span>
+          </span>
+        </div>
+        <h1 class="hero-title">
+          <span class="gsx">GSX</span>
+          <span class="launchctrl">LAUNCHCTRL</span>
+        </h1>
+        <p class="hero-tagline">LAUNCH SMARTER. EXECUTE HARDER.</p>
+        <p class="hero-description">
+          An AI coding-agent CLI built for high-performance development workflows.
+          Plan the mission, select the right tools, coordinate your agents, and execute
+          with full visibility and control.
+        </p>
+        <div class="hero-cta">
+          <button class="btn btn-primary btn-cta" onclick="handleComingSoon()">
+            COMING SOON
+          </button>
+          <button class="btn btn-secondary btn-cta" onclick="scrollToSection('mission')">
+            EXPLORE THE VISION
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Mission Section -->
+  <section id="mission" class="section section-sm">
+    <div class="container">
+      <h2 class="h1 text-center" style="margin-bottom: 1.5rem;">BUILT FOR BUILDERS WHO PUSH LIMITS.</h2>
+      <p class="body-large text-center" style="max-width: 700px; margin: 0 auto 3rem;">
+        Development should feel less like fighting your tools and more like engineering
+        a machine. GSX-LAUNCHCTRL is being built around a deliberate, coordinated,
+        controllable workflow.
+      </p>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <h3 class="h3">Plan the Mission</h3>
+          <p class="body">Define objectives, scope, and constraints before any code is written. Every action is deliberate and traceable.</p>
+        </div>
+        <div class="card">
+          <h3 class="h3">Select Your Tools</h3>
+          <p class="body">Choose the right model, MCP server, and agent for each task. Local-first, cloud-optional.</p>
+        </div>
+        <div class="card">
+          <h3 class="h3">Coordinate Agents</h3>
+          <p class="body">Organize deterministic agent handoffs with full visibility into every step of the workflow.</p>
+        </div>
+        <div class="card">
+          <h3 class="h3">Execute Harder</h3>
+          <p class="body">Run with full observability. Know exactly what your agents are doing at every moment.</p>
+        </div>
+        <div class="card">
+          <h3 class="h3">Local-First</h3>
+          <p class="body">Ollama, HexStrike MCP, and RAG knowledge base — all running on your machine, not in the cloud.</p>
+        </div>
+        <div class="card">
+          <h3 class="h3">Built for Speed</h3>
+          <p class="body">Terminal-native workflow. Shell-first design. No wasted motion. Performance is the feature.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Terminal Showcase Section -->
+  <section id="terminal" class="section section-sm" style="background: var(--gsxr-carbon);">
+    <div class="container">
+      <h2 class="h1 text-center" style="margin-bottom: 1rem;">CONCEPT TERMINAL PREVIEW</h2>
+      <p class="body text-center" style="max-width: 600px; margin: 0 auto 3rem;">
+        Experience the GSX-LAUNCHCTRL command-line interface before launch.
+      </p>
+
+      <div class="terminal" style="max-width: 800px; margin: 0 auto;">
+        <div class="terminal-header">
+          <div class="terminal-dot terminal-dot-red"></div>
+          <div class="terminal-dot terminal-dot-yellow"></div>
+          <div class="terminal-dot terminal-dot-green"></div>
+          <span class="terminal-text-small">launchctrl — v0.1.0 (concept)</span>
+        </div>
+        <div class="terminal-body">
+          <div class="terminal-line">
+            <span class="prompt">gsx@launchctrl</span><span class="prompt-span">:~$</span> <span class="command" id="typedCommand"></span><span class="terminal-cursor"></span>
+          </div>
+          <div id="commandOutput" class="output"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engineering Philosophy Section -->
+  <section id="philosophy" class="section section-sm">
+    <div class="container">
+      <h2 class="h1 text-center" style="margin-bottom: 1rem;">
+        <span class="text-gradient-blue">POWER</span> MEANS NOTHING
+        <span class="text-gradient-blue"> WITHOUT CONTROL.</span>
+      </h2>
+      <p class="body text-center" style="max-width: 600px; margin: 0 auto 3rem;">
+        Four principles guide the design of every interaction in GSX-LAUNCHCTRL.
+      </p>
+
+      <div class="principle-grid">
+        <div class="principle-item">
+          <div class="principle-icon">🎯</div>
+          <div class="principle-title">PLAN</div>
+          <div class="principle-desc">Define the mission with clear objectives and scope.</div>
+        </div>
+        <div class="principle-item">
+          <div class="principle-icon">⚙</div>
+          <div class="principle-title">SELECT</div>
+          <div class="principle-desc">Choose the right model and tools for each task.</div>
+        </div>
+        <div class="principle-item">
+          <div class="principle-icon">🔗</div>
+          <div class="principle-title">COORDINATE</div>
+          <div class="principle-desc">Organize workflow with deterministic agent handoffs.</div>
+        </div>
+        <div class="principle-item">
+          <div class="principle-icon">🚀</div>
+          <div class="principle-title">EXECUTE</div>
+          <div class="principle-desc">Work with full visibility and controlled execution.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coming Soon Section -->
+  <section id="contact" class="section section-sm">
+    <div class="container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+        <h2 class="h1" style="margin-bottom: 1.5rem;">
+          <span class="text-gradient-blue">THE LIGHTS</span> ARE ON.
+          <span class="text-gradient-blue"> THE GRID</span> IS WAITING.
+        </h2>
+        <p class="body" style="color: var(--gsxr-silver); margin-bottom: var(--gsxr-space-xxl);">
+          GSX-LAUNCHCTRL is in development. A new approach to AI-powered development
+          is taking shape. Follow the build as we move toward launch.
+        </p>
+        <div class="hero-cta">
+          <button class="btn btn-primary btn-cta">FOLLOW THE BUILD</button>
+          <a href="https://github.com/Sabriigsxr/gsxr" class="btn btn-outline btn-cta">
+            VIEW SOURCE CODE
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: #000000; padding: 3rem var(--gsxr-space-md) 2rem; border-top: 1px solid rgba(255,255,255,0.05);">
+    <div class="container">
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+        <div class="nav-logo">
+          <span class="logo-text">GSX</span>
+          <span class="logo-accent">LAUNCHCTRL</span>
+        </div>
+        <div class="body" style="color: var(--gsxr-silver);">Launch Smarter. Execute Harder.</div>
+        <div class="status-label">
+          <span class="status-indicator">
+            <span class="status-dot"></span>
+            <span>IN DEVELOPMENT</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
